@@ -1,0 +1,423 @@
+/* ========================================
+   基本設定
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        sans-serif;
+
+    background: #f7f8fc;
+    color: #24232b;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   サイドバー
+======================================== */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #dcd5ff,
+            #d8f1ff
+        );
+
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* サイト名 */
+
+.site-logo {
+    margin-bottom: 60px;
+}
+
+.site-logo span {
+    display: block;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.site-logo small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+    letter-spacing: 0.15em;
+
+    opacity: 0.65;
+}
+
+
+/* ナビゲーション */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    display: block;
+
+    padding: 10px 14px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, 0.5);
+
+    transform: translateX(3px);
+}
+
+.sidebar nav a.active {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ========================================
+   メイン
+======================================== */
+
+.main {
+    margin-left: 240px;
+
+    max-width: 1200px;
+
+    padding: 70px 70px;
+}
+
+
+/* ========================================
+   見出し
+======================================== */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 700px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    opacity: 0.55;
+}
+
+h1 {
+    margin: 0 0 25px;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.1;
+}
+
+h2 {
+    margin-top: 0;
+
+    font-size: 20px;
+    letter-spacing: 0.08em;
+}
+
+.page-header {
+    margin-bottom: 60px;
+
+    max-width: 700px;
+}
+
+
+/* ========================================
+   セクション
+======================================== */
+
+.section {
+    margin-bottom: 70px;
+
+    max-width: 800px;
+}
+
+.section p {
+    color: #55545e;
+}
+
+
+/* ========================================
+   更新履歴
+======================================== */
+
+.update-list {
+    border-top: 1px solid #dddde5;
+}
+
+.update-list p {
+    margin: 0;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #dddde5;
+}
+
+.update-list time {
+    font-size: 13px;
+    font-weight: 700;
+
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   キャラクター検索
+======================================== */
+
+.character-tools {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.character-tools input,
+.character-tools select {
+    padding: 12px 14px;
+
+    border: 1px solid #d7d7df;
+    border-radius: 8px;
+
+    background: white;
+
+    font: inherit;
+}
+
+.character-tools input {
+    flex: 1;
+}
+
+
+/* ========================================
+   キャラクター一覧
+======================================== */
+
+.character-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(190px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* キャラクターカード */
+
+.character-card {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(30, 30, 50, 0.06);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(30, 30, 50, 0.12);
+}
+
+
+/* キャラクター画像 */
+
+.character-image {
+    aspect-ratio: 3 / 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            150deg,
+            #e7ddff,
+            #d9f4ff
+        );
+
+    color: rgba(40, 40, 60, 0.35);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* キャラクター情報 */
+
+.character-info {
+    padding: 15px 17px;
+}
+
+.character-info h2 {
+    margin: 0;
+
+    font-size: 17px;
+
+    letter-spacing: 0;
+}
+
+.character-info p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+
+    color: #777681;
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        padding: 20px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+
+    .site-logo {
+        margin-bottom: 20px;
+    }
+
+
+    .site-logo span {
+        font-size: 22px;
+    }
+
+
+    .sidebar nav {
+        flex-direction: row;
+
+        gap: 4px;
+
+        overflow-x: auto;
+    }
+
+
+    .sidebar nav a {
+        white-space: nowrap;
+
+        font-size: 11px;
+    }
+
+
+    .main {
+        margin-left: 0;
+
+        padding: 45px 20px;
+    }
+
+
+    .hero {
+        min-height: 350px;
+    }
+
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+
+    .character-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .character-info {
+        padding: 11px 12px;
+    }
+
+
+    .character-info h2 {
+        font-size: 14px;
+    }
+
+
+    .character-tools {
+        flex-direction: column;
+    }
+
+}
