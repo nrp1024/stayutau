@@ -2,6 +2,12 @@
    基本設定
 ======================================== */
 
+@font-face {
+    font-family: "LogoTypeGothic";
+    src: url("../fonts/ロゴたいぷゴシック.otf") format("opentype");
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -14,15 +20,14 @@ body {
     margin: 0;
 
     font-family:
-        "Noto Sans JP",
-        "Yu Gothic",
-        "Hiragino Kaku Gothic ProN",
-        sans-serif;
+    "LogoTypeGothic",
+        sans-serif,;
 
     background: #f7f8fc;
     color: #24232b;
 
     line-height: 1.8;
+
 }
 
 
@@ -65,50 +70,44 @@ body {
     letter-spacing: 0.08em;
 }
 
-.site-logo small {
-    display: block;
-
-    margin-top: 3px;
-
-    font-size: 10px;
-    letter-spacing: 0.15em;
-
-    opacity: 0.65;
-}
-
 
 /* ナビゲーション */
 
 .sidebar nav {
     display: flex;
     flex-direction: row;
-    gap: 35px;
+    gap: 50px;
 }
 
 .sidebar nav a {
     position: relative;
-
-    display: block;
-    padding: 8px 0;
-
     color: inherit;
     text-decoration: none;
-
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 0.08em;
-
-    border-radius: 0;
+    letter-spacing: 0.1em;
 }
 
-.sidebar nav a:hover {
-    background: rgba(255, 255, 255, 0.5);
+.sidebar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    transform: translateX(3px);
+    width: 0;
+    height: 3px;
+
+    background: #b7cdff;
+
+    transition: width 0.5s ease;
 }
 
-.sidebar nav a.active {
-    background: rgba(255, 255, 255, 0.75);
+.sidebar nav a:hover::after {
+    width: 100%;
+}
+
+.sidebar nav a.active::after {
+    width: 100%;
 }
 
 
@@ -118,8 +117,10 @@ body {
 
 .main {
     margin-left: 0;
-    max-width: 1200px;
     padding: 70px 70px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 
@@ -151,9 +152,10 @@ body {
 h1 {
     margin: 0 0 25px;
 
-    font-size: clamp(42px, 6vw, 72px);
+    font-size: 48px;
 
     line-height: 1.1;
+    
 }
 
 h2 {
@@ -176,8 +178,6 @@ h2 {
 
 .section {
     margin-bottom: 70px;
-
-    max-width: 800px;
 }
 
 .section p {
