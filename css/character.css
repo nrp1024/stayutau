@@ -1,0 +1,480 @@
+/* ========================================
+   CHARACTER PAGE
+======================================== */
+
+
+/* ==============================
+   キャラクター基本情報
+================================ */
+
+.character-page {
+    max-width: 1200px;
+}
+
+
+.character-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 500px;
+
+    align-items: center;
+
+    gap: 60px;
+
+    margin-bottom: 50px;
+}
+
+
+/* 左：プロフィール */
+
+.character-profile {
+    padding: 20px 0;
+}
+
+
+.character-label {
+    margin: 0 0 10px;
+
+    font-size: 13px;
+    letter-spacing: 0.18em;
+
+    opacity: 0.5;
+}
+
+
+.character-profile h1 {
+    margin: 0;
+
+    font-size: 42px;
+}
+
+
+.character-reading {
+    margin: 5px 0 35px;
+
+    font-size: 15px;
+
+    opacity: 0.55;
+}
+
+
+/* プロフィール項目 */
+
+.profile-list {
+    border-top: 1px solid #dddde5;
+}
+
+
+.profile-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #dddde5;
+}
+
+
+.profile-item span {
+    opacity: 0.55;
+}
+
+
+/* ==============================
+   立ち絵
+================================ */
+
+.character-standing {
+    aspect-ratio: 3 / 4;
+
+    max-height: 550px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            150deg,
+            #e7ddff,
+            #d9f4ff
+        );
+
+    color: rgba(40, 40, 60, 0.35);
+
+    letter-spacing: 0.15em;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   タブ
+================================ */
+
+.character-tabs {
+
+    display: flex;
+
+    border-bottom: 1px solid #d8d8e0;
+
+    margin-bottom: 60px;
+}
+
+
+.character-tabs a {
+
+    position: relative;
+
+    padding: 15px 35px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.character-tabs a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 0;
+    height: 3px;
+
+    background: #b7cdff;
+
+    transition: width 0.3s ease;
+}
+
+
+.character-tabs a:hover::after,
+.character-tabs a.active::after {
+
+    width: 100%;
+}
+
+
+/* ==============================
+   各セクション
+================================ */
+
+.character-section {
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    gap: 70px;
+
+    margin-bottom: 100px;
+
+    scroll-margin-top: 40px;
+}
+
+
+/* 左側のメモ */
+
+.section-note {
+
+    font-size: 13px;
+
+    color: #777681;
+
+    padding-top: 10px;
+}
+
+
+.section-note p {
+
+    margin: 0;
+
+    padding: 25px;
+
+    border: 1px solid #dcdce5;
+
+    border-radius: 50%;
+}
+
+
+/* 右側 */
+
+.section-content {
+
+    min-width: 0;
+}
+
+
+.section-content h2 {
+
+    margin: 0 0 40px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #d8d8e0;
+
+    font-size: 26px;
+}
+
+
+.section-content h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   詳細
+================================ */
+
+.detail-block {
+
+    margin-bottom: 35px;
+}
+
+
+.detail-block p {
+
+    margin: 0;
+
+    color: #55545e;
+}
+
+
+/* ==============================
+   音源
+================================ */
+
+.voicebank {
+
+    margin-bottom: 45px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dddde5;
+}
+
+
+.voicebank h3 {
+
+    margin-bottom: 0;
+}
+
+
+.voicebank-type {
+
+    margin: 0 0 15px;
+
+    color: #777681;
+
+    font-size: 13px;
+}
+
+
+.voicebank audio {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ダウンロードボタン */
+
+.download-button {
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    border: 1px solid #cfd1dc;
+
+    border-radius: 6px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+
+.download-button:hover {
+
+    background: #eef1ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   個人規約
+================================ */
+
+.rule-lead {
+
+    margin-bottom: 40px;
+
+    color: #55545e;
+}
+
+
+.rule-item {
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #dddde5;
+}
+
+
+.rule-mark {
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+.rule-item h3 {
+
+    margin-bottom: 8px;
+}
+
+
+.rule-item p {
+
+    margin: 0;
+
+    color: #55545e;
+}
+
+
+.rule-note {
+
+    margin-top: 10px !important;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+/* ==============================
+   スマートフォン
+================================ */
+
+@media (max-width: 700px) {
+
+
+    .character-page {
+        width: 100%;
+    }
+
+
+    /* 基本情報 */
+
+    .character-hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        min-height: auto;
+
+        margin-bottom: 35px;
+    }
+
+
+    .character-profile h1 {
+
+        font-size: 34px;
+    }
+
+
+    /* 立ち絵 */
+
+    .character-standing {
+
+        width: 80%;
+
+        margin: 0 auto;
+
+        max-height: none;
+    }
+
+
+    /* タブ */
+
+    .character-tabs {
+
+        margin-bottom: 45px;
+
+        overflow-x: auto;
+    }
+
+
+    .character-tabs a {
+
+        flex: 1;
+
+        padding: 13px 10px;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        font-size: 12px;
+    }
+
+
+    /* セクション */
+
+    .character-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 70px;
+    }
+
+
+    /* 規約 */
+
+    .rule-item {
+
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+    }
+
+}
