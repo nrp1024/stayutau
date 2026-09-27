@@ -17,23 +17,21 @@ html {
 }
 
 body {
-    margin: 0;
+    background-image:
+        linear-gradient(
+            0deg,
+            transparent calc(100% - 1px),
+            #f0f0f0 calc(100% - 1px)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(100% - 1px),
+            #f0f0f0 calc(100% - 1px)
+        );
 
-    font-family: "LogoTypeGothic", sans-serif;
-
-    background: #f7f8fc;
-    color: #24232b;
-
-    line-height: 1.8;
-
-    /*方眼紙模様*/
-    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
-                      linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
     background-size: 16px 16px;
     background-repeat: repeat;
-    background-position: center center;
-
-
+    background-position: 0 0;
 }
 
 
@@ -353,9 +351,8 @@ h2 {
 
 
     .main {
-        margin-left: 0;
-
-        padding: 45px 20px;
+    width: 95%;
+    padding: 20px 20px;
     }
 
 
@@ -370,10 +367,16 @@ h2 {
 
 
     .character-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    width: 100%;
+    padding: 10px 0;
+    
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    }
 
-        gap: 12px;
+    .character-card {
+        width: 100%;
     }
 
 
