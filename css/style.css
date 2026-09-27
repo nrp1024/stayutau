@@ -17,21 +17,23 @@ html {
 }
 
 body {
-    background-image:
-        linear-gradient(
-            0deg,
-            transparent calc(100% - 1px),
-            #f0f0f0 calc(100% - 1px)
-        ),
-        linear-gradient(
-            90deg,
-            transparent calc(100% - 1px),
-            #f0f0f0 calc(100% - 1px)
-        );
+    margin: 0;
 
+    font-family: "LogoTypeGothic", sans-serif;
+
+    background: #f7f8fc;
+    color: #24232b;
+
+    line-height: 1.8;
+
+    /*方眼紙模様*/
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                      linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
     background-size: 16px 16px;
     background-repeat: repeat;
     background-position: 0 0;
+
+
 }
 
 
@@ -241,24 +243,20 @@ h2 {
 ======================================== */
 
 .character-grid {
-    display: inline-block;
-    width: 256px;
+    width: calc(100% + 50%);
+    margin-left: -25%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-
 
 /* キャラクターカード */
 
 .character-card {
-    display: block;
-
+    width: 90%;
     color: inherit;
     text-decoration: none;
-
     background: rgba(255, 255, 255, 0);
-
     overflow: hidden;
-
-
     transition:
         transform 0.2s,
         box-shadow 0.2s;
@@ -351,8 +349,9 @@ h2 {
 
 
     .main {
-    width: 95%;
-    padding: 20px 20px;
+        margin-left: 0;
+
+        padding: 20px 20px;
     }
 
 
@@ -367,12 +366,11 @@ h2 {
 
 
     .character-grid {
-    width: 100%;
-    padding: 10px 0;
-    
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+        width: 100%;
+        padding: 10px 0;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
     }
 
     .character-card {
